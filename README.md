@@ -1,10 +1,10 @@
-# @ras-sh/template-nextjs-convex
+# template-nextjs-convex
 
-▲⚡ Full-stack template with Next.js 15 and Convex. Includes SSR, real-time sync, and optimistic updates.
+▲⚡ Full-stack template with Next.js 16 and Convex. Includes SSR, real-time sync, and optimistic updates.
 
 ## Features
 
-- **[Next.js 15](https://nextjs.org)** + **[Convex](https://convex.dev)** - Full-stack with real-time database
+- **[Next.js 16](https://nextjs.org)** + **[Convex](https://convex.dev)** - Full-stack with real-time database
 - **Turbopack** - Next-generation bundler for fast development
 - **Optimistic Updates** - Instant UI feedback
 - **TypeScript** - End-to-end type safety

@@ -120,7 +120,7 @@ export function Content({
             <Badge variant="outline">v{packageJson.version}</Badge>
           </div>
           <h1 className="mb-8 font-bold text-4xl tracking-tight">
-            ▲ ras.sh Next.js + Convex Template
+            ▲ Next.js + Convex Template
           </h1>
 
           <div className="space-y-4">
@@ -156,7 +156,7 @@ export function Content({
                     Powered by Convex with optimistic updates
                   </CardDescription>
                 </div>
-                {todos && todos.length > 0 && (
+                {!!todos && todos.length > 0 && (
                   <Badge className="text-xs" variant="secondary">
                     {todos.filter((t) => !t.isCompleted).length} active
                   </Badge>
@@ -166,7 +166,7 @@ export function Content({
             <CardContent>
               <div className="space-y-4">
                 <TodoForm />
-                {todos && <TodoList todos={todos} />}
+                {!!todos && <TodoList todos={todos} />}
               </div>
             </CardContent>
           </Card>
@@ -195,11 +195,11 @@ export function Content({
             </a>
             <a
               className="block underline transition-colors hover:text-zinc-100"
-              href="https://ras.sh"
+              href="https://solomou.dev"
               rel="noopener"
               target="_blank"
             >
-              More templates by ras.sh →
+              More templates →
             </a>
           </div>
         </section>

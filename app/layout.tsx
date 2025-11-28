@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ras.sh",
+  title: "template-nextjs-convex",
   description:
-    "A collection of side projects, experiments, and tools built with modern technologies",
+    "▲⚡ Full-stack template with Next.js 16 and Convex. Includes SSR, real-time sync, and optimistic updates.",
 };
 
 export default function RootLayout({
