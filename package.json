@@ -34,7 +34,7 @@
   "dependencies": {
     "@ras-sh/ui": "^0.0.6",
     "convex": "^1.29.3",
-    "next": "^16.0.5",
+    "next": "^16.0.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
