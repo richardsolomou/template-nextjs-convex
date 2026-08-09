@@ -18,44 +18,35 @@ export function useAddTodo() {
         text: args.text,
         isCompleted: false,
       };
-      localStore.setQuery(api.todos.list, {}, [
-        optimisticTodo,
-        ...currentTodos,
-      ]);
+      localStore.setQuery(api.todos.list, {}, [optimisticTodo, ...currentTodos]);
     }
   });
 }
 
 export function useToggleTodo() {
-  return useMutation(api.todos.toggle).withOptimisticUpdate(
-    (localStore, args) => {
-      const currentTodos = localStore.getQuery(api.todos.list, {});
-      if (currentTodos !== undefined) {
-        localStore.setQuery(
-          api.todos.list,
-          {},
-          currentTodos.map((todo) =>
-            todo._id === args.id
-              ? { ...todo, isCompleted: !todo.isCompleted }
-              : todo
-          )
-        );
-      }
+  return useMutation(api.todos.toggle).withOptimisticUpdate((localStore, args) => {
+    const currentTodos = localStore.getQuery(api.todos.list, {});
+    if (currentTodos !== undefined) {
+      localStore.setQuery(
+        api.todos.list,
+        {},
+        currentTodos.map((todo) =>
+          todo._id === args.id ? { ...todo, isCompleted: !todo.isCompleted } : todo,
+        ),
+      );
     }
-  );
+  });
 }
 
 export function useRemoveTodo() {
-  return useMutation(api.todos.remove).withOptimisticUpdate(
-    (localStore, args) => {
-      const currentTodos = localStore.getQuery(api.todos.list, {});
-      if (currentTodos !== undefined) {
-        localStore.setQuery(
-          api.todos.list,
-          {},
-          currentTodos.filter((todo) => todo._id !== args.id)
-        );
-      }
+  return useMutation(api.todos.remove).withOptimisticUpdate((localStore, args) => {
+    const currentTodos = localStore.getQuery(api.todos.list, {});
+    if (currentTodos !== undefined) {
+      localStore.setQuery(
+        api.todos.list,
+        {},
+        currentTodos.filter((todo) => todo._id !== args.id),
+      );
     }
-  );
+  });
 }
