@@ -28,7 +28,7 @@
     "start": "next start",
     "export": "pnpm build && next export -o _static",
     "check-types": "tsc --noEmit",
-    "check": "oxlint --type-aware --deny-warnings .",
+    "check": "oxfmt --check . && oxlint --type-aware --deny-warnings .",
     "fix": "oxfmt --write . && oxlint --type-aware --fix .",
     "policy:check": "ras-stack-policy check"
   },
