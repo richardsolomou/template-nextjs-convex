@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ConvexClientProvider } from "@/components/providers";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const geist = Geist({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistMono = Geist_Mono({
   variable: "--font-mono",
@@ -25,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className={`${geist.variable} ${geistMono.variable} dark min-h-dvh antialiased`}>
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
