@@ -8,7 +8,7 @@
 - **Turbopack** - Next-generation bundler for fast development
 - **Optimistic Updates** - Instant UI feedback
 - **TypeScript** - End-to-end type safety
-- **Tailwind CSS v4** + **@ras-sh/ui** - Modern styling and components
+- **Tailwind CSS v4** + **shadcn/ui with Base UI** - Modern styling and local components
 
 Includes a working todo list demo showing Convex integration, custom hooks, and optimistic update patterns.
 
