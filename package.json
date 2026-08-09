@@ -1,7 +1,6 @@
 {
   "name": "template-nextjs-convex",
   "version": "0.0.3",
-  "type": "module",
   "private": true,
   "description": "Template for Next.js projects with Convex.",
   "keywords": [],
@@ -10,16 +9,17 @@
     "url": "https://github.com/richardsolomou/template-nextjs-convex/issues",
     "email": "richard@solomou.dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/richardsolomou/template-nextjs-convex"
-  },
   "license": "MIT",
   "author": {
     "name": "Richard Solomou",
     "email": "richard@solomou.dev",
     "url": "https://solomou.dev"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richardsolomou/template-nextjs-convex"
+  },
+  "type": "module",
   "scripts": {
     "dev": "concurrently \"pnpm dev:web\" \"pnpm dev:convex\"",
     "dev:web": "next dev --turbopack",
@@ -28,27 +28,33 @@
     "start": "next start",
     "export": "pnpm build && next export -o _static",
     "check-types": "tsc --noEmit",
-    "check": "ultracite check",
-    "fix": "ultracite fix --unsafe"
+    "check": "oxlint --type-aware --deny-warnings .",
+    "fix": "oxfmt --write . && oxlint --type-aware --fix .",
+    "policy:check": "ras-stack-policy check"
   },
   "dependencies": {
     "@ras-sh/ui": "^0.0.6",
-    "convex": "^1.31.7",
-    "next": "^16.1.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "convex": "^1.43.0",
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.0",
-    "@ras-sh/typescript-config": "^0.0.3",
-    "@tailwindcss/postcss": "^4.1.18",
-    "@types/node": "^25.2.3",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "concurrently": "^9.2.1",
-    "lefthook": "^2.1.1",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3",
-    "ultracite": "7.2.2"
-  }
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "concurrently": "^10.0.4",
+    "lefthook": "^2.1.10",
+    "oxfmt": "^0.62.0",
+    "oxlint": "^1.77.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "ras-stack": "^0.8.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "packageManager": "pnpm@11.15.0"
 }

@@ -26,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geist.variable} ${geistMono.variable} dark min-h-dvh antialiased`}
-      >
+      <body className={`${geist.variable} ${geistMono.variable} dark min-h-dvh antialiased`}>
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>

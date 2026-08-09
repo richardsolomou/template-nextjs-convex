@@ -30,15 +30,15 @@ pnpm dev               # Start dev servers
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start both Next.js and Convex dev servers |
-| `pnpm dev:web` | Start only Next.js dev server (port 3000) |
-| `pnpm dev:convex` | Start only Convex dev server |
-| `pnpm build` | Build for production |
-| `pnpm check-types` | Run TypeScript type checking |
-| `pnpm check` | Run linter checks |
-| `pnpm fix` | Auto-fix linting issues |
+| Command            | Description                               |
+| ------------------ | ----------------------------------------- |
+| `pnpm dev`         | Start both Next.js and Convex dev servers |
+| `pnpm dev:web`     | Start only Next.js dev server (port 3000) |
+| `pnpm dev:convex`  | Start only Convex dev server              |
+| `pnpm build`       | Build for production                      |
+| `pnpm check-types` | Run TypeScript type checking              |
+| `pnpm check`       | Run linter checks                         |
+| `pnpm fix`         | Auto-fix linting issues                   |
 
 ## Project Structure
 
