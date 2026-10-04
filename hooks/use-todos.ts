@@ -14,6 +14,7 @@ export function useAddTodo() {
     if (currentTodos !== undefined) {
       const optimisticTodo = {
         _id: crypto.randomUUID() as Id<"todos">,
+        // oxlint-disable-next-line react/purity -- Convex invokes this callback when dispatching a mutation.
         _creationTime: Date.now(),
         text: args.text,
         isCompleted: false,
